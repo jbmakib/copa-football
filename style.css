@@ -38,15 +38,20 @@ intro/home section styles starts
 #intro {
     background-color: #2D25A0;
     color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-#intro .half-width h1 {
+#intro h1 {
     font-size: 64px;
     font-weight: 700;
+    width: 485px;
 }
 
-#intro .half-width img {
-    width: 100%;
+#intro img {
+    /* width: 100%; */
+    width: 556px;
+    height: 456px;
 }
 
 
@@ -88,18 +93,27 @@ players section styles starts
 highlights section styles starts 
 \* -------------------------- */
 
-#highlights .half-width h1 {
+#highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #fff;
+}
+
+#highlights h1 {
     font-size: 48px;
     margin-bottom: 8px;
     width: 469px;
 }
 
-#highlights .half-width p {
+#highlights p {
     margin-bottom: 34px;
+    width: 404px;
 }
 
-#highlights .half-width img {
-    width: 100%;
+#highlights img {
+    /* width: 100%; */
+    width: 567px;
+    height: 427px;
 }
 
 
@@ -151,49 +165,83 @@ footer section styles starts
 
 @media only screen and (max-width:688px) {
     /* common styles */
-    .flexible {
-        flex-direction: column;
-        align-items: center;
-    }
-    .half-width {
-        width: 90%;
-    }
     .container {
         padding: 0;
     }
     .img-parent {
         text-align: center;
     }
+    .crimson-button {
+        margin-left: 15px;
+    }
     /* home/intro section */
     #intro {
         width: 100%;
+        grid-template-columns: repeat(1, 1fr);
     }
-    #intro .half-width h1 {
-        width: 100%;
+    #intro h1 {
+        width: 278px;
+        padding-left: 15px;
         font-size: 36px;
     }
-    #intro .half-width img {
-        width: 329px;
-        height: 259.17px;
+    #intro img {
+        width: 90%;
+        height: auto;
         margin-top: 50px;
+    }
+    section {
+        margin-bottom: 30px;
     }
     /* players section */
     #players {
         grid-template-columns: repeat(1, 1fr);
     }
+    .player-box {
+        width: 80%;
+        height: auto;
+    }
+    .player-box:nth-child(1) {
+        margin-top: 30px;
+    }
     /* highlights section starts */
-    #highlights .half-width h1 {
+    #highlights {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #highlights h1 {
         padding-right: 0;
         font-size: 30px;
-        width: 100%;
+        width: 90%;
+        padding-left: 15px;
+        margin: 0 0 8px;
     }
-    #highlights .half-width p {
+    #highlights h1::before {
+        content: "Highlights";
+        display: block;
+        color: #E02C6D;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #highlights p {
         padding-right: 0;
-        width: 100%;
+        width: 90%;
+        padding-left: 15px;
     }
-    #highlights .half-width img {
-        width: 328px;
-        height: 248px;
+    #highlights img {
+        width: 90%;
+        height: auto;
         margin-top: 50px;
+    }
+    /* footer section */
+    footer {
+        margin-top: 80px;
+        padding-top: 20px;
+    }
+    footer img {
+        width: 271px;
+        height: auto;
+    }
+    footer p {
+        font-size: 15px;
     }
 }
