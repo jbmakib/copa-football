@@ -10,17 +10,8 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.flexible {
-    display: flex;
-    justify-content: space-between;
-}
-
 .container {
     padding: 100px;
-}
-
-.half-width {
-    width: 45%;
 }
 
 .crimson-button {
@@ -28,6 +19,19 @@ body {
     color: #fff;
     background-color: #E02C6D;
     padding: 10px 24px;
+    display: inline-block;
+    transition: transform 1s;
+}
+
+.crimson-button:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.flexible-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 
@@ -49,7 +53,6 @@ intro/home section styles starts
 }
 
 #intro img {
-    /* width: 100%; */
     width: 556px;
     height: 456px;
 }
@@ -111,7 +114,6 @@ highlights section styles starts
 }
 
 #highlights img {
-    /* width: 100%; */
     width: 567px;
     height: 427px;
 }
@@ -156,8 +158,62 @@ footer p {
 }
 
 
+/* ----------------------------- *\
+latest result section styles starts 
+\* ----------------------------- */
+
+#latest-result {
+    text-align: center;
+    background-color: rgb(45, 37, 160);
+    padding: 30px 0;
+}
+
+h2.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: white;
+    margin-top: 0;
+}
+
+.result {
+    width: 300px;
+    height: 220px;
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.result .time {
+    font-size: 1.3em;
+    font-weight: 550;
+    margin-bottom: 25px;
+}
+
+.fa-trophy {
+    color: #CF7000;
+}
+
+.fa-times {
+    color: crimson;
+}
+
+.result .team {
+    width: 80px;
+}
+
+.flexible-content .team img {
+    width: 40px;
+    height: 40px;
+}
+
+
 /* ---------------------- *\
-footer section styles starts 
+responsive design starts 
 \* ---------------------- */
 
 
@@ -174,6 +230,9 @@ footer section styles starts
     .crimson-button {
         margin-left: 15px;
     }
+    section {
+        margin-bottom: 30px;
+    }
     /* home/intro section */
     #intro {
         width: 100%;
@@ -189,19 +248,21 @@ footer section styles starts
         height: auto;
         margin-top: 50px;
     }
-    section {
-        margin-bottom: 30px;
-    }
     /* players section */
     #players {
         grid-template-columns: repeat(1, 1fr);
     }
+    #players::before {
+        content: "Players";
+        display: block;
+        font-size: 30px;
+        color: #E02C6D;
+        text-align: center;
+        font-weight: 700;
+    }
     .player-box {
         width: 80%;
         height: auto;
-    }
-    .player-box:nth-child(1) {
-        margin-top: 30px;
     }
     /* highlights section starts */
     #highlights {
@@ -232,9 +293,14 @@ footer section styles starts
         height: auto;
         margin-top: 50px;
     }
+    /* latest result section */
+    .result {
+        width: 75%;
+        height: auto;
+    }
     /* footer section */
     footer {
-        margin-top: 80px;
+        margin-top: 20px;
         padding-top: 20px;
     }
     footer img {
