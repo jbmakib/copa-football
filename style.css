@@ -354,6 +354,15 @@ responsive design starts
         width: 75%;
         height: auto;
     }
+    /* copa jersey shop */
+    #copa-shop .jersey-shop {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .item {
+        width: 90%;
+        height: auto;
+        margin: auto;
+    }
     /* footer section */
     footer {
         margin-top: 20px;
