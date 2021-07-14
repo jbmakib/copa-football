@@ -289,6 +289,9 @@ responsive design starts
     section {
         margin-bottom: 30px;
     }
+    h2.section-title {
+        font-size: 30px;
+    }
     /* home/intro section */
     #intro {
         width: 100%;
