@@ -34,6 +34,14 @@ body {
     flex-wrap: wrap;
 }
 
+h2.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
 
 /* -------------------------- *\
 intro/home section styles starts 
@@ -164,17 +172,12 @@ latest result section styles starts
 
 #latest-result {
     text-align: center;
-    background-color: rgb(45, 37, 160);
+    background-color: #10437A;
     padding: 30px 0;
 }
 
-h2.section-title {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 30px;
+#latest-result h2.section-title {
     color: white;
-    margin-top: 0;
 }
 
 .result {
@@ -209,6 +212,59 @@ h2.section-title {
 .flexible-content .team img {
     width: 40px;
     height: 40px;
+}
+
+
+/* ------------- *\
+Shops design starts 
+\* ------------- */
+
+#copa-shop .jersey-shop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.item img {
+    width: 100%;
+}
+
+.item .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item a {
+    display: inline-block;
+    width: 47%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    /* background-color: aqua; */
+}
+
+.item a.price {
+    background-color: #EEEEEE;
+    color: black;
+    border: 2px solid #EEEEEE;
+    transition: color .8s, background .8s;
+}
+
+.item a.price:hover {
+    background: transparent;
+}
+
+.item a.add-cart {
+    background-color: #3DBAFD;
+    color: white;
+    border: 2px solid #3DBAFD;
+    transition: color .8s, background .8s;
+}
+
+.item a.add-cart:hover {
+    color: #3DBAFD;
+    background: transparent;
 }
 
 
